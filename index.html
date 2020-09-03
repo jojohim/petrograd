@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrograd</title>
+    <meta name="Petrograd Restaurant" content="The Green Restaurant Menu - Multimedia Design Project">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/cutlery.svg">
+</head>
+
+<body>
+    <nav class="topnav">
+        <a href=# id="logo">
+            <h1>PETROGRAD</h1>
+        </a>
+
+    </nav>
+    <details>
+        <summary>Filters</summary>
+        <button id="veggiefilter">Veggie Only</button>
+    </details>
+
+    <main class="productlist">
+        <div class="header"></div>
+        <section id="entrees" name="entrees">
+            <template id="productTemplate">
+                <article class="product">
+                    <section class="productbody">
+                        <h3 class="data_name"></h3>
+                        <p class="data_shortdescription"></p>
+                    </section>
+                    <div class="image_wrapper">
+                        <h4 class="soldout">SOLD OUT</h4>
+                        <img class="productImage" alt="">
+                        <div class="prices">
+                            <h3 class="data_price"></h3>
+                            <h3 class="data_discount hidden">10,-</h3>
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <img class="vegetarian hidden" src="images/leaf.svg">
+                        <img class="nuts hidden" src="images/nut.svg">
+                        <img class="dairy hidden" src="images/milk.svg">
+                        <h4 class="alc_wrapper">ALC:<div class="alcohol"></div>
+                            %</h4>
+                    </div>
+                    <button>See Details</button>
+                </article>
+
+            </template>
+        </section>
+    </main>
+
+    <footer>
+        Johanna Himstedt 2020
+    </footer>
+
+    <div class="modal-background hide">
+        <div class="modal-content">
+            <h3 class="modal-name">NAME</h3>
+            <img src="" alt="" class="modal-image" />
+            <p class="modal-description">LONG DESCRIPTION</p>
+            <h4 class="modal-price">PRICE</h4>
+        </div>
+    </div>
+
+    <script src="petrograd.js"></script>
+</body></html>

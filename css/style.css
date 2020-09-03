@@ -1,0 +1,256 @@
+/*
+- Repetition of grid command for each sections, problems when switching to .product
+- removing section headlines from the grid
+- add hamburger menu or find soluton for mobile menu
+*/
+
+
+/*FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Source+Sans+Pro&display=swap');
+
+body {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: "Cabin Sketch";
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: "source sans pro";
+    font-size: 2rem;
+    grid-column: 1 / -1;
+}
+
+h3 {
+    font-family: "cabin sketch";
+    font-size: 1.4rem;
+    padding-bottom: 1vw;
+}
+
+h4 {
+    font-family: "source sans pro";
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-family: "source sans pro";
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+nav a {
+    padding-right: 2vw;
+    color: black;
+    text-decoration: none;
+    padding-left: 2vw;
+    font-family: "source sans pro";
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+nav #logo:hover {
+    text-decoration: none;
+    opacity: 100%;
+}
+
+nav a:hover {
+    cursor: pointer;
+    opacity: 70%;
+    text-decoration: underline;
+}
+
+.header {
+    text-align: center;
+    padding-top: 3vw;
+}
+
+
+main > section {
+    font-family: helvetica;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 4vw;
+    margin: 2vw;
+    padding: 2vw;
+}
+
+.product {
+    position: relative;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2vw;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+.data_shortdescription {
+    margin-top: -2em;
+}
+.productlist .productImage {
+    height: 18rem;
+    width: 28rem;
+    object-fit: cover;
+    max-width: 100%;
+    margin-top: auto;
+}
+
+.image_wrapper {
+    position: relative;
+}
+.prices {
+    display: flex;
+}
+
+.data_price {
+    display: flex;
+   position: absolute;
+    top: 55%;
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.data_discount{
+    display: flex;
+   position: absolute;
+    top: 26%;
+    font-size: 1.8rem;
+    background-color: whitesmoke;
+    padding: 1rem;
+    padding-right: 1.8rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+
+}
+
+
+.soldout {
+    font-family: helvetica;
+    position: absolute;
+    top: -1.6rem;
+    right: 8em;
+    border-bottom-left-radius: 1rem;
+    background-color: darkslategrey;
+    color: white;
+    padding: 0.7rem;
+
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    min-height: 6rem;
+    margin-top: -1rem;
+}
+
+.icons img {
+    position: relative;
+    max-width: 3rem;
+    padding-right: 1.2rem;
+    padding-top: 1rem;
+
+}
+
+.icons .alc_wrapper {
+    font-size: 1xrem;
+    position: absolute;
+    right: 3rem;
+
+}
+
+
+button {
+    font-family: "cabin sketch";
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 2rem;
+    margin: 2rem;
+
+}
+
+
+button:hover {
+    background: none;
+    color: darkgreen;
+    border: 0.05rem solid darkgreen;
+    cursor: pointer;
+}
+
+footer {
+    font-family: helvetica;
+    padding: 2vw;
+    text-align: center;
+}
+
+/*MODAL CSS*/
+
+.hide {
+  display: none;
+}
+.modal-background {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
+/*CLASS LIST*/
+
+.hidden {
+    display: none;
+}
+
+.linethrough {
+    text-decoration: line-through;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 2vw;
+    }
+
+    nav a {
+        padding-bottom: 4vw;
+    }
+
+    #logo {
+        margin-bottom: -2em;
+    }
+}
